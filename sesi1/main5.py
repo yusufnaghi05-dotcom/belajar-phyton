@@ -15,7 +15,7 @@ def menu():
         sys.exit()
         
     else:
-        print("Hanya boleh memilih yang tersedia di menu!")
+        print("Hanya Boleh Memilih Yang Tersedia Di Menuuu!")
 
 def main():
     welcome_message() 
