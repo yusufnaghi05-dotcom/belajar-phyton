@@ -20,12 +20,6 @@ def start():
         else: 
             exit_program()
             sys.exit()
-        # if play_again == "y":
-        #     main5.menu()
-          
-        #   else:
-        #     exit_program()
-        #     sys.exit()
 
 if __name__ =="__main__":
     start()
