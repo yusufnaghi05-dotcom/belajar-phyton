@@ -1,5 +1,4 @@
 import random
-import main5
 def start():
     while True:
         cuypy_position = random.randint(1, 4)    
@@ -33,7 +32,8 @@ def start():
         
         play_again = input("\napak ingin melanjutkan gamenya lagi? [y/n]")
         if play_again == "n":
-            main5.menu()
+            import sesi1.main.main5
+            sesi1.main.main5.menu()
 
 if __name__ == "__main__":
     start()

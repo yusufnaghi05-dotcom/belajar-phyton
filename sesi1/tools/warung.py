@@ -1,10 +1,8 @@
-import sys
+import sys 
 import os
-sys.path.append(
-    os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-)
-import main5
-from libs import exit_program
+
+
+from sesi1.tools.libs import exit_program
 def start():
     while True:
         print("Naghi mempunyai uang 10000, lalu ia membeli pulpen seharga 8000")
@@ -17,7 +15,8 @@ def start():
     while True:
         kembali_menu = input("Kembali ke menu? [y/n]: ")
         if kembali_menu == "y":
-            main5.menu()
+            import sesi1.main.main5
+            sesi1.main.main5.menu()
         else: 
             exit_program()
             sys.exit()

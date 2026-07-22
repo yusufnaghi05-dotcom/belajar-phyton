@@ -1,6 +1,6 @@
-from libs import welcome_message, exit_program
-from games import cuypy 
-from tools import warung
+from sesi1.tools.libs import welcome_message, exit_program
+from sesi1.games import cuypy 
+from sesi1.tools import warung
 import sys 
 
 def menu():
