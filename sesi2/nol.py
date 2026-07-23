@@ -6,5 +6,5 @@ name = input("what is your name?: ")
 print("Hello, ", end="???")
 print(name)
 
-print("halo", "coder", sep=", ", end="!\n")
-print("naghi")
+print("hello", "coder", sep=", ", end="!\n")
+print(f"naghi {name}")

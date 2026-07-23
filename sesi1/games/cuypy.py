@@ -30,7 +30,7 @@ def start():
             print(f"{goa} \n Maaf kamu kalah!")    
     
         
-        play_again = input("\napak ingin melanjutkan gamenya lagi? [y/n]")
+        play_again = input("\napakah ingin melanjutkan gamenya lagi? [y/n]")
         if play_again == "n":
             import sesi1.main.main5
             sesi1.main.main5.menu()
