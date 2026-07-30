@@ -1,3 +1,4 @@
+# Latihan: if/elif/else berantai untuk menentukan grade dari score
 score = int(input("Score: "))
 
 if score >= 90:

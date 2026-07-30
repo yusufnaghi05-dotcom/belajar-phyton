@@ -1,4 +1,5 @@
-name = input("What is your name?")
+# Latihan: match/case untuk menentukan rumah Hogwarts berdasarkan nama
+name = input("What is your name? ")
 
 match name:
     case "Harry":
