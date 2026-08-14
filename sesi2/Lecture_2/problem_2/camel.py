@@ -8,3 +8,4 @@ for x in camel:
     else:
         print(x, end="")
 print()
+
