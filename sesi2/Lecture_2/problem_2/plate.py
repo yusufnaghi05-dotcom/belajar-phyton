@@ -14,7 +14,7 @@ def is_valid(s):
     sudah_ketemu_angka = False
     for x in s:
         if x.isalpha():
-            if sudah_ketemu_angka:
+            if sudah_ketemu_angka == True:
                 return False  
         if x.isdigit():
             if not sudah_ketemu_angka and x == "0":
