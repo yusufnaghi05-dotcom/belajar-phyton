@@ -1,3 +1,5 @@
+import csv
+
 def main():
     fruit = input("Item: ").lower()
     if calories(fruit):
@@ -6,16 +8,10 @@ def main():
         pass
         
 def calories(x):
-    data = {
-        "apple": 130,
-        "banana": 110,
-        "avocado": 50,
-        "cantaloupe": 50,
-        "grapefruit": 60,
-        "grapes": 90,
-        
-    }
-    
-    
-    
+    with open("nutrition.csv") as file:
+        reader = csv.reader(file) 
+        for row in reader:
+            if row[0] == x:
+                return int(row[1])
+
 main()
