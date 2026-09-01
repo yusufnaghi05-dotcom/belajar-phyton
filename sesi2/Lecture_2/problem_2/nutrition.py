@@ -1,17 +1,28 @@
-import csv
-
 def main():
     fruit = input("Item: ").lower()
-    if calories(fruit):
-        print(f"Calories: {calories(fruit)}")
-    else:
-        pass
+    calories = {
+        "apple": 130,
+        "avocado": 50,
+        "banana": 110,
+        "cantaloupe": 50,
+        "grapefruit": 60,
+        "grapes": 90,
+        "honeydew": 50,
+        "kiwifruit": 90,
+        "lemon": 15,
+        "lime": 20,
+        "nectarine": 60,
+        "orange": 80,
+        "peach": 60,
+        "pear": 100,
+        "pineapple": 50,
+        "plums": 70,
+        "strawberries": 50,
+        "sweet cherries": 100,
+        "tangerine": 50,
+        "watermelon": 80
+    }
+    if fruit in calories:
+        print(f"Calories: {calories[fruit]}")
         
-def calories(x):
-    with open("nutrition.csv") as file:
-        reader = csv.reader(file) 
-        for row in reader:
-            if row[0] == x:
-                return int(row[1])
-
 main()
