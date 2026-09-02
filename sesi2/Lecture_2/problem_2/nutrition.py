@@ -23,6 +23,7 @@ def main():
         "watermelon": 80
     }
     if fruit in calories:
-        print(f"Calories: {calories[fruit]}")
+        xy = (f"Calories: {calories[fruit]}")
+        print(xy)
         
 main()

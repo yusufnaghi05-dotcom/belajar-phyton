@@ -15,4 +15,4 @@ elif y == "/":
 elif y == "*":
     hasil = x * z
 hasil_akhir = float(hasil)
-print(f"{hasil_akhir:.1f}")
+print(f"{hasil_akhir:.2f}")
