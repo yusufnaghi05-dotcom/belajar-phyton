@@ -1,15 +1,16 @@
 def main():
     grocery()
-    
-    
 def grocery():
+    grocery = {}
     while True:
         try:
             item = input().upper()
-            for x in item:
-                if x == item:
-                        
+            if item in grocery:
+                grocery[item] = grocery[item] + 1
+            else:
+                grocery[item] = 1
         except EOFError:
-            return item
-            
+            break
+    for item in sorted(grocery):
+        print(grocery[item], item)
 main()
