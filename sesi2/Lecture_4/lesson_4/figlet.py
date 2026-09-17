@@ -9,6 +9,10 @@ if len(sys.argv) == 3:
         if sys.argv[2] not in pyfiglet.FigletFont.getFonts():
             sys.exit()
 if len(sys.argv) == 1:
-    font = random.choice(pyfiglet.FigletFont.getFonts())
+    the_font = random.choice(pyfiglet.FigletFont.getFonts())
 else:
-    font = sys.argv[2]
+    the_font = sys.argv[2]
+    
+text = input("Input: ")
+
+print(pyfiglet.figlet_format(text, font=the_font))
