@@ -6,30 +6,18 @@ if len(sys.argv) < 2:
     sys.exit("Too few command-line arguments")
 if len(sys.argv) > 2:
     sys.exit("Too many command-line arguments")
-if sys.argv[1].endswith(".txt"):
-    sys.exit("Not a CSV file")
 if not sys.argv[1].endswith(".csv"):
-    sys.exit("Not a Python file")
+    sys.exit("Not a CSV file")
 data = []
+
 try:
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
+        header = reader.fieldnames
         for row in reader:
-            data.append({"Regular Pizza": row["Regular Pizza"], "Small": row["Small"], "Large": row["Large"]})
+            data.append(row)
 except FileNotFoundError:
     sys.exit("File does not exist")
     
-new_table = tabulate.tabulate(data)
+new_table = tabulate.tabulate(data, headers="keys", tablefmt="grid")
 print(new_table)
-    
-# import csv
-
-# students = []
-
-# with open("students.csv") as file:
-#     reader = csv.DictReader(file)
-#     for row in reader:
-#         students.append({"name": row["name"], "home": row["home"]})
-
-# for student in sorted(students, key=lambda student: student['name']):
-#     print(f'{student["name"]} is in {student["home"]}')
