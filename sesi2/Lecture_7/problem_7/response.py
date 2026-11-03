@@ -7,3 +7,4 @@ if new_email == True:
     print("Valid")
 else:
     print("Invalid")
+    
