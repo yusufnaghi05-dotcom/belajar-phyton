@@ -84,59 +84,59 @@
 # if __name__ == "__main__":
 #     main()
 
-# class Student:
-#     def __init__(self, name, house):
-#         self.name = name
-#         self.get_house = house
-#     def __str__(self):
-#         return f"{self.name} from {self.get_house}"
-    
-#     @property
-#     def name(self):
-#         return self._name
-#     @name.setter
-#     def name(self, name):
-#         if not name:
-#             raise ValueError("Missing Name")
-#         self._name = name
-#     @property
-#     def get_house(self):
-#         return self._house
-     
-#     @get_house.setter
-#     def get_house(self, house):
-#         if house not in ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]:
-#             raise ValueError
-#         self._house = house
-    
-# def main():
-#     student = get_student()
-#     student._name = "Drive"
-#     print(student)
-# def get_student():
-#     name =input("Name: ")
-#     house =input("House: ")
-#     return Student(name, house)
-# if __name__ == "__main__":
-#     main()
-
 class Student:
     def __init__(self, name, house):
         self.name = name
-        self.house = house
+        self.get_house = house
     def __str__(self):
-        return f"{self.name} from {self.house}"
+        return f"{self.name} from {self.get_house}"
     
-    @classmethod
-    def get(cls):
-        name = input("Name: ")
-        house = input("House: ")
-        return cls(name, house)
+    @property
+    def name(self):
+        return self._name
+    @name.setter
+    def name(self, name):
+        if not name:
+            raise ValueError("Missing Name")
+        self._name = name
+    @property
+    def get_house(self):
+        return self._house
+     
+    @get_house.setter
+    def get_house(self, house):
+        if house not in ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]:
+            raise ValueError
+        self._house = house
     
 def main():
-    student = Student.get()
+    student = get_student()
+    student._name = "Drive"
     print(student)
-    
+def get_student():
+    name =input("Name: ")
+    house =input("House: ")
+    return Student(name, house)
 if __name__ == "__main__":
     main()
+
+# class Student:
+#     def __init__(self, name, house):
+#         self.name = name
+#         self.house = house
+#     def __str__(self):
+#         return f"{self.name} from {self.house}"
+    
+#     @classmethod
+#     def get(cls):
+#         name = input("Name: ")
+#         house = input("House: ")
+#         return cls(name, house)
+    
+# def main():
+#     student = Student.get()
+#     print(student)
+    
+# if __name__ == "__main__":
+#     main()
     
