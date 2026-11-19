@@ -1,12 +1,13 @@
 from datetime import date
 import inflect
 p = inflect.engine()
+import sys
 def main():
     try:
         tanggal = input("Date of Birth: ")
         print(convert(tanggal))
     except ValueError:
-        print("Invalid date")
+        sys.exit("Invalid date")
 def convert(x):
     tanggal_baru = date.fromisoformat(x)
     today = date.today()
@@ -16,6 +17,5 @@ def convert(x):
         raise ValueError
     menit = jumlah_hari * 24 * 60
     return f"{p.number_to_words(menit, andword="").capitalize()} minutes"
-
 if __name__ == "__main__":
     main()
